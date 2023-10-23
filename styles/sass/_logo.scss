@@ -1,0 +1,19 @@
+.bloc_logo{
+    text-transform: uppercase;
+
+    .logo{
+        @include Border_Test(red);
+        font-size: 36px;
+
+        span{
+            color: $txt_color_3;
+        }
+    }
+}
+
+footer{
+    .bloc_logo{
+        // background-color: red;
+        margin: auto;
+    }
+}
