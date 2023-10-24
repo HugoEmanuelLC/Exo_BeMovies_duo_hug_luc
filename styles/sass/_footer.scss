@@ -16,12 +16,12 @@ footer{
         }
     }
 
-    .nav_footer{
-        @include Border_Test(red);
-    }
+    // .nav_footer{
+        // @include Border_Test(red);
+    // }
 
     .copyright{
-        @include Border_Test(red);
+        // @include Border_Test(red);
         color: $txt_color_2;
         margin: auto;
     }

@@ -1,23 +1,82 @@
-// .gallery{
-// }
-.swiper{
-    border: solid red 2px;
-    // display: grid;
-    //     grid-template-columns: repeat(2, 200px);
-}
-.swiper-wrapper{
-    border: solid blue 2px;
-    // width: 100%;
-}
-.swiper-slide{
-    border: solid white 2px;
-    // @include Dfx-JCc-AIc;
-    // max-height: 351px;
-    // max-width: 234px;
 
-    // img{
-        // width: 100%;
+.bloc_gallery{
+    @include phone{
+        margin: 0 50px;
+    }
+}
+
+// .swiper{
+// }
+// .swiper-wrapper{
+// }
+.swiper-slide{
+    @include Dfx-JCc-AIc;
+
+    img{
+        object-fit: cover;
+    }
+}
+
+.bloc_float{
+    background-color: transparent;
+    color: transparent;
+    position: absolute;
+        left: 0;
+    height: 100%;
+    width: 100%;
+    @include Dfx-JCc-AIc;
+    flex-direction: column;
+    gap: 23px;
+    @include phone{
+        gap: 5px;
+    }
+    @include ipad_max{
+        gap: 15px;
+    }
+    text-align: center;
+    cursor: pointer;
+
+    &:hover{
+        background-color: #000000E5;
+        
+        h3, p{
+            color: $txt_color_1;
+        }
+        
+        .date{
+            color: $txt_color_2;
+        }
+
+        i, .note{
+            color: $txt_color_3;
+        }
+
+        // p{}
+    }
+    
+    // &:hover h3,
+    // &:hover p{
+    //     color: $txt_color_1;
     // }
+
+    // &:hover .date{
+    //     color: $txt_color_2;
+    // }
+
+    // &:hover i,
+    // &:hover .note{
+    //     color: $txt_color_3;
+    // }
+
+    h3,.date{
+        font-size: 20px;
+        font-weight: 700;
+    }
+    // .date{
+    // }
+    i, .note{
+        font-size: 32px;
+    }
 }
 
 
@@ -27,8 +86,8 @@
 }
 .swiper-button-next,
 .swiper-button-prev{
-    display: block !important;
-    z-index: 2000;
+    display: block;
+    // z-index: 2000;
     i{
         font-size: 18px;
         color: $txt_color_1;

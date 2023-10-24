@@ -2,7 +2,7 @@
     text-transform: uppercase;
 
     .logo{
-        @include Border_Test(red);
+        // @include Border_Test(red);
         font-size: 36px;
 
         span{

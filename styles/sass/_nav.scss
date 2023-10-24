@@ -30,7 +30,7 @@ nav.nav_header{
         position: fixed;
             top: 0;
             right: -105vw;
-            z-index: 500;
+            z-index: 20000;
         height: 100vh;
         width: 100vw;
 
@@ -70,21 +70,42 @@ nav.nav_header{
     }
 }
 
+.bloc_nav{
+    @include Dfx-JCc-AIc;
+}
+.nav_genre{
+    position: relative;
+    padding-bottom: 26px;
+    margin-bottom: 29px;
+    ::before{
+        content: '';
+        position: absolute;
+            bottom: 0;
+            left: 10px;
+        width: calc(100% - 20px);
+        height: 1px;
+        background-color: $txt_color_1;
+    }
+}
+
 
 // SHOW AND HIDE BURGER NAVIGATION
 #burger{
-    border: solid 5px green;
+    // border: solid 5px green;
     background-color: pink;
     display: none;
 
     &:checked ~ nav{
         right: 0;
     }
+    &:checked ~ label{
+        position: fixed;
+    }
 }
 #burger ~ label{
     position: absolute;
         right: 180px;
-        z-index: 1000;
+        z-index: 40000;
     display: none;
 
     @include ipad_max{
