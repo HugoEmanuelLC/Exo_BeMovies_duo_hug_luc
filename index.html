@@ -32,21 +32,21 @@
             <nav class="nav_header">
                 <a href="#">Search</a>
                 <a href="#">Latest</a>
-                <a href="#">Genres</a>
-                <a class="btn_modal_on " href="#">Register</a>
-                <a href="#">Signin</a>
+                <a class="btn_modal_movie_on " href="#">Genres</a>
+                <a class="btn_modal_login_on " href="#">Register</a>
+                <a class="btn_modal_login_on " href="#">Signin</a>
             </nav>
         </div>
     </header>
 
     <!-- MODAL INFOS MOVIES -->
     <div class="modal modal_movie_item modal_desactive">
-        <div class="bloc_movie_item">
-            <i class='bx bx-x-circle btn_modal_off '></i>
+        <div class="bloc_item">
+            <i class='bx bx-x-circle btn_modal_movie_off '></i>
             <div class="movie_item">
 
                 <img src="imageTest.png" alt="">
-                
+
                 <div class="infos_head">
                     <!-- title -->
                     <h3 class="title">The Godfather part III</h3>
@@ -67,14 +67,76 @@
                     <br>
                     <p>
                         <span class="title">Cast: </span>
-                        Will Smith, The Rock 
+                        Will Smith, The Rock
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- <div class="modal modal_register_login"></div> -->
+    <!-- MODAL REGISTER LOGIN -->
+    <div class="modal modal_register_login modal_desactive">
+        <div class="bloc_item">
+            <i class='bx bx-x-circle btn_modal_login_off '></i>
+            <div class="register_login_item">
+                <div class="buttons">
+                    <button class="sig">signup</button>
+                    <button class="log button_activ">login</button>
+                </div>
+                <form action="#">
+                    <input type="text" name="usr" placeholder="Username">
+                    <input type="password" name="pass" placeholder="Password">
+                    <div class="bloc_check">
+                        <input type="checkbox" name="checkbox">
+                        <label for="">Remember me</label>
+                    </div>
+                    <button class="submit">login</button>
+                    <span class="msg">I forgot my password</span>
+                    <label class="choice">Not a member yer ? <span>Sign up</span></label>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEMPLATE -->
+    <template class="template_login_item">
+        <div class="register_login_item">
+            <div class="buttons">
+                <button class="sig">signup</button>
+                <button class="log button_activ">login</button>
+            </div>
+            <form action="#">
+                <input type="text" name="usr" id="usr" placeholder="Username">
+                <input type="password" name="pass" id="pass" placeholder="Password">
+                <div class="bloc_check">
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Remember me</label>
+                </div>
+                <button class="submit">login</button>
+                <span class="msg">I forgot my password</span>
+                <label class="choice">Not a member yer ? <span>Sign up</span></label>
+            </form>
+    </template>
+
+    <template class="template_register_item">
+        <div class="register_login_item">
+            <div class="buttons">
+                <button class="sig button_activ">signup</button>
+                <button class="log">login</button>
+            </div>
+            <form action="#">
+                <input type="text" name="usr" id="usr" placeholder="Username">
+                <input type="password" name="pass" id="pass" placeholder="Password">
+                <input type="password" name="verif_pass" id="verif_pass" placeholder="Verification password">
+                <div class="bloc_check">
+                    <input type="checkbox" name="checkbox">
+                    <label for="">Remember me</label>
+                </div>
+                <button class="submit">login</button>
+                <span class="msg">I forgot my password</span>
+                <!--<label class="choice">Not a member yer ? <span>Sign up</span></label> -->
+            </form>
+    </template>
 
 
     <main>
@@ -114,114 +176,6 @@
                                             <img src="imageTest.png" alt="">
                                         </div>
                                     </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -242,78 +196,6 @@
                             <div class="swiper swiper_Latest_releases">
                                 <div class="swiper-wrapper">
                                     <!-- ELEMENTS SLIDE -->
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
                                     <div class="swiper-slide">
                                         <div class="item">
                                             <div class="bloc_float">
@@ -380,78 +262,6 @@
                                             <img src="imageTest.png" alt="">
                                         </div>
                                     </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="item">
-                                            <div class="bloc_float">
-                                                <!-- title -->
-                                                <h3 class="title">The Godfather part III</h3>
-                                                <!-- date -->
-                                                <span class="date">1990</span>
-                                                <!-- genre -->
-                                                <p>Crime / Drama / Thriller</p>
-                                                <!-- star -->
-                                                <i class='bx bxs-star'></i>
-                                                <!-- note -->
-                                                <span class="note">7.4</span>
-                                            </div>
-                                            <img src="imageTest.png" alt="">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -493,6 +303,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <!-- STYLE BURGER -->
     <script src="js/swiper/swiper.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>

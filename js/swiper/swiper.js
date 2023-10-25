@@ -62,22 +62,3 @@ $(function(){
 })
 
 
-document.querySelector('.btn_modal_off')
-.addEventListener('click', (e) => {
-    e.stopPropagation()
-    if (document.querySelector('.modal_movie_item').matches('.modal_desactive') == true) {
-        document.querySelector('.modal_movie_item').className = 'modal modal_movie_item modal_active'
-    } else if(document.querySelector('.modal_movie_item').matches('.modal_active') == true) {
-        document.querySelector('.modal_movie_item').className = 'modal modal_movie_item modal_desactive'
-    }else{}
-})
-
-document.querySelector('.btn_modal_on')
-.addEventListener('click', (e) => {
-    e.stopPropagation()
-    if (document.querySelector('.modal_movie_item').matches('.modal_desactive') == true) {
-        document.querySelector('.modal_movie_item').className = 'modal modal_movie_item modal_active'
-    } else if(document.querySelector('.modal_movie_item').matches('.modal_active') == true) {
-        document.querySelector('.modal_movie_item').className = 'modal modal_movie_item modal_desactive'
-    }else{}
-})

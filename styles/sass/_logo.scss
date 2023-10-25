@@ -1,9 +1,9 @@
 .bloc_logo{
-    text-transform: uppercase;
 
     .logo{
         // @include Border_Test(red);
         font-size: 36px;
+        text-transform: uppercase;
 
         span{
             color: $txt_color_3;
