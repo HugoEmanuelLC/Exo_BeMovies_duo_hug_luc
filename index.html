@@ -32,8 +32,8 @@
             <nav class="nav_header">
                 <a href="#">Search</a>
                 <a href="#latest-releases">Latest</a>
-                <a class="btn_modal_movie_on " href="#">Genres</a>
-                <a class="btn_modal_login_on " href="#">Register</a>
+                <a href="#genre" href="#">Genres</a>
+                <a class="btn_modal_register_on " href="#">Register</a>
                 <a class="btn_modal_login_on " href="#">Signin</a>
             </nav>
         </div>
@@ -43,34 +43,7 @@
     <div class="modal modal_movie_item modal_desactive">
         <div class="bloc_item">
             <i class='bx bx-x-circle btn_modal_movie_off '></i>
-            <div class="movie_item">
-
-                <img src="imageTest.png" alt="">
-
-                <div class="infos_head">
-                    <!-- title -->
-                    <h3 class="title">The Godfather part III</h3>
-                    <!-- date -->
-                    <span class="date">1990</span>
-                    <!-- star & note -->
-                    <span class="note"><i class='bx bxs-star'></i> 7.4</span>
-                    <!-- genre -->
-                    <p>Crime / Drama / Thriller</p>
-                </div>
-
-                <div class="infos_body">
-                    <p>Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American
-                        Corleone crime family.
-                        When organized crime family patriarch, Vito Corleone barely survives an attempt on his life,
-                        his youngest son, Michael steps in to take care of the would-be killers,
-                        launching a campaign of bloody revenge.</p>
-                    <br>
-                    <p>
-                        <span class="title">Cast: </span>
-                        Will Smith, The Rock
-                    </p>
-                </div>
-            </div>
+            <div class="movie_item"></div>
         </div>
     </div>
 
@@ -99,32 +72,56 @@
     </div>
 
     <!-- TEMPLATE -->
+
+    <template class="template_modal_infos_movies">
+        <img src="" alt="">
+        <div class="infos_head">
+            <!-- title -->
+            <h3 class="title">Title</h3>
+            <!-- date -->
+            <span class="date">Date</span>
+            <!-- star & note -->
+            <span class="note"><i class='bx bxs-star'></i> 7.4</span>
+            <!-- genre -->
+            <p class="genre"></p>
+        </div>
+
+        <div class="infos_body">
+            <p class="description"></p>
+            <br>
+            <p>
+                <span class="title cast">Cast: </span>
+                <span class="actors"></span>
+            </p>
+        </div>
+    </template>
+
     <template class="template_login_item">
-        <div class="register_login_item">
+        <div class="register_login_item bloc_login">
             <div class="buttons">
                 <button class="sig">signup</button>
                 <button class="log button_activ">login</button>
             </div>
-            <form action="#">
-                <input type="text" name="usr" id="usr" placeholder="Username">
-                <input type="password" name="pass" id="pass" placeholder="Password">
+            <form>
+                <input type="text" name="username" id="usr" placeholder="Username">
+                <input type="password" name="password" id="pass" placeholder="Password">
                 <div class="bloc_check">
-                    <input type="checkbox" name="checkbox">
+                    <input type="checkbox" name="remember">
                     <label for="">Remember me</label>
                 </div>
-                <button class="submit">login</button>
+                <button class="submit submit_login">login</button>
                 <span class="msg">I forgot my password</span>
                 <label class="choice">Not a member yer ? <span>Sign up</span></label>
             </form>
     </template>
 
     <template class="template_register_item">
-        <div class="register_login_item">
+        <div class="register_login_item bloc_register">
             <div class="buttons">
                 <button class="sig button_activ">signup</button>
                 <button class="log">login</button>
             </div>
-            <form action="#">
+            <form>
                 <input type="text" name="usr" id="usr" placeholder="Username">
                 <input type="password" name="pass" id="pass" placeholder="Password">
                 <input type="password" name="verif_pass" id="verif_pass" placeholder="Verification password">
@@ -132,7 +129,7 @@
                     <input type="checkbox" name="checkbox">
                     <label for="">Remember me</label>
                 </div>
-                <button class="submit">login</button>
+                <button class="submit submit_register">Register</button>
                 <span class="msg">I forgot my password</span>
                 <!--<label class="choice">Not a member yer ? <span>Sign up</span></label> -->
             </form>
@@ -225,21 +222,21 @@
                 </div>
             </section>
 
-            <section class="section section_genre">
+            <section class="section section_genre" id="genre">
                 <div class="section_container">
                     <h2 id="genres">Movies by genre</h2>
                     <div class="bloc_nav">
                         <nav class="nav_genre">
-                            <a href="#">Comedy</a>
-                            <a href="#">Drama</a>
-                            <a href="#">Action</a>
-                            <a href="#">Romance</a>
-                            <a href="#">Fantasy</a>
-                            <a href="#">Animation</a>
+                            <a class="active">Comedy</a>
+                            <a class="">Drama</a>
+                            <a class="">Action</a>
+                            <a class="">Romance</a>
+                            <a class="">Fantasy</a>
+                            <a class="">Animation</a>
                         </nav>
                         <span></span>
                     </div>
-                    <h2>Comedy</h2>
+                    <h2 class="category-p">Comedy</h2>
                     <div class="bloc_gallery">
                         <div class="gallery">
                             <div class="swiper swiper_genre">

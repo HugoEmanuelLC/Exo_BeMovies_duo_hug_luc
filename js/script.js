@@ -79,6 +79,12 @@ function dataDispatcher(response, swipperCategory, htmlTag) {
   }
 }
 
+function accessKeyBlocFloat(response, swipperCategory, htmlTag) {
+  for (let i=0; i < response.length; i++){
+    swipperCategory.children[i].querySelector(htmlTag).setAttribute('accessKey', response[i]);
+  }
+}
+
 // function deleteAllDiv(htmlTag){
 //   for (let i = 1; i < 19; i++) {
 //     htmlTag.children[i].remove();
@@ -86,16 +92,18 @@ function dataDispatcher(response, swipperCategory, htmlTag) {
 // }
 
 function deleteLastDiv(htmlTag) {
-  htmlTag.children[20].remove();
+  // htmlTag.children[20].remove();
 }
 
 async function getMovieCategory (category) {
+  document.querySelector('.swiper-wrapper-genre').innerHTML = ""
   const response = await fetch(`https://api.themoviedb.org/3/discover/movie?&with_genres=${category}`, options);
   const data = await response.json();
   let allUrlPoster = [];
   let allMovieTitle = [];
   let allMovieDate = [];  
   let allMovieVote = [];
+  let allMovieId = [];
   let urlPoster = '';
 
   data.results.forEach((movie) => {
@@ -103,10 +111,12 @@ async function getMovieCategory (category) {
     movieTitle = movie.original_title;
     movieDate = movie.release_date;
     movieVote = movie.vote_average;
+    movieId = movie.id;
     allUrlPoster.push(urlPoster);
     allMovieTitle.push(movieTitle);
     allMovieDate.push(movieDate);
     allMovieVote.push(movieVote);
+    allMovieId.push(movieId);
   });
 
   slideImg.src = allUrlPoster[0]
@@ -119,6 +129,8 @@ async function getMovieCategory (category) {
   dataDispatcher(allMovieTitle, swiperWrapperGenre,'.title');
   dataDispatcher(allMovieDate, swiperWrapperGenre,'.date');
   dataDispatcher(allMovieVote, swiperWrapperGenre,'.note');
+  accessKeyBlocFloat(allMovieId, swiperWrapperGenre,'.bloc_float');
+  
 
 }
 getMovieCategory(35);
@@ -130,6 +142,7 @@ async function getSearchResult (searchBar) {
   let allMovieTitle = [];
   let allMovieDate = [];  
   let allMovieVote = [];
+  let allMovieId = [];
   let urlPoster = '';
 
   data.results.forEach((movie) => {
@@ -137,10 +150,12 @@ async function getSearchResult (searchBar) {
     movieTitle = movie.original_title;
     movieDate = movie.release_date;
     movieVote = movie.vote_average;
+    movieId = movie.id;
     allUrlPoster.push(urlPoster);
     allMovieTitle.push(movieTitle);
     allMovieDate.push(movieDate);
     allMovieVote.push(movieVote);
+    allMovieId.push(movieId);
   });
 
   slideImg.src = allUrlPoster[0]
@@ -148,11 +163,11 @@ async function getSearchResult (searchBar) {
     displaySlide(i, allUrlPoster[i], swiperWrapperSearch);
   }
 
-
   
   dataDispatcher(allMovieTitle, swiperWrapperSearch, '.title');
   dataDispatcher(allMovieDate, swiperWrapperSearch, '.date');
   dataDispatcher(allMovieVote, swiperWrapperSearch, '.note');
+  accessKeyBlocFloat(allMovieId, swiperWrapperSearch,'.bloc_float');
 
 }
 
@@ -164,6 +179,7 @@ async function getLastedReleases () {
   let allMovieTitle = [];
   let allMovieDate = [];  
   let allMovieVote = [];
+  let allMovieId = [];
   let urlPoster = '';
  
   data.results.forEach((movie) => {
@@ -171,10 +187,12 @@ async function getLastedReleases () {
     movieTitle = movie.original_title;
     movieDate = movie.release_date;
     movieVote = movie.vote_average;
+    movieId = movie.id;
     allUrlPoster.push(urlPoster);
     allMovieTitle.push(movieTitle);
     allMovieDate.push(movieDate);
     allMovieVote.push(movieVote);
+    allMovieId.push(movieId);
   });
 
   slideImg.src = allUrlPoster[0]
@@ -186,6 +204,7 @@ async function getLastedReleases () {
   dataDispatcher(allMovieTitle, swiperWrapperLatestReleases,'.title');
   dataDispatcher(allMovieDate, swiperWrapperLatestReleases,'.date');
   dataDispatcher(allMovieVote, swiperWrapperLatestReleases,'.note');
+  accessKeyBlocFloat(allMovieId, swiperWrapperLatestReleases,'.bloc_float');
 }
 
 getSearchResult ();
