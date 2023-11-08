@@ -286,7 +286,6 @@ nav a:hover, nav a:focus {
   top: 0;
   left: 0;
   padding: 20px;
-  transition-delay: 0.5s;
 }
 
 .modal_desactive {
